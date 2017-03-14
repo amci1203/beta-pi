@@ -3,13 +3,25 @@
 }
 
 body {
-    font-family : 'Roboto', 'Arial', sans-serif;
-    padding     : 0;
-    margin      : 0;
-    color       : #111;
+    background-color : $body-bg;
+    font-family      : 'Roboto', 'Arial', sans-serif;
+    padding          : 0;
+    padding-bottom   : 180px;
+    margin           : 0;
+    color            : $body-fg;
     &.sticky-top {
         @mixin atMedium { padding-top: $primary-navH };
     }
+    #body-bg {
+        @mixin deadCenter;
+        z-index: -100;
+    }
+    #copyright-text {
+        padding-top : 4.8rem;
+        display     : block;
+        text-align  : center;
+    }
+
 }
 
 img {

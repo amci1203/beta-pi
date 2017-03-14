@@ -21,7 +21,8 @@
     $brand-danger  : rgb(217, 83, 79);
 
     /* CUSTOM COLORS */
-    $mainBlue   : rgb(40, 171, 197);
+    $royalBlue  : rgb(65, 105, 225);
+    $mainBlue   : $royalBlue;
     $mainYellow : rgb(253, 188, 0);
     $mainOrange : rgb(213, 149, 65);
 
@@ -35,8 +36,8 @@
 
 /* DEFAULTS */
 
-    $body-bg : $white;
-    $body-fg : $darkest-gray;
+    $body-bg : $mainBlue;
+    $body-fg : $white;
     $font-sz : 14px;
 
     $link-color       : $gray;
@@ -56,26 +57,28 @@
     $btn-hPadding  : 1.2rem;
 
     /* CARDS */
-    $cards-color   : color($mainBlue l(+ 25%));
+    $cards-color   : $white;
     $cards-border  : color($cards-color l(- 5%));
     $cards-text    : $darkest-gray;
 
     /* LARGE HERO */
-    $large-hero-background   : $lighter-gray;
-    $large-hero-border-color : $gray;
-    $large-hero-title-text   : $dark-gray;
-    $large-hero-text         : $darkest-gray;
+    $large-hero-background   : rgba(0, 0, 0, 0);
+    $large-hero-border-color : none;
+    $large-hero-title-text   : $white;
+    $large-hero-text         : $large-hero-title-text;
 
     /* NAVS */
-    $navs-color   : $darker-gray;
+    $navs-color   : color($mainBlue l(- 15));
     $navs-hover   : color($navs-color b(+ 10%));
     $navs-current : $navs-hover;
     $navs-active  : $navs-hover;
 
-    $navs-text         : #FFF;
+    $navs-text         : $white;
     $navs-hover-text   : $navs-text;
     $navs-current-text : $navs-text;
     $navs-active-text  : $navs-text;
+
+    $mob-nav-color : $navs-color;
 
     /* FOOTER */
     $footer-color : $navs-color;

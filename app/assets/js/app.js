@@ -9,8 +9,12 @@ import FullScreenSection  from './modules/FullScreenSection';
 
 function init () {
     MobileMenu();
+    StickyHeader();
     ScrollSpy();
-    StickyHeader(true);
+    FullScreenSection('.large-hero')
+
 }
 
-$(document).ready(Injector.bind(window, init))
+function doNothing () {}
+
+$(document).ready( Injector.bind(window, init) )

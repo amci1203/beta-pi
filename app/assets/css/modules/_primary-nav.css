@@ -40,9 +40,9 @@
         margin     : 0;
         padding    : 0;
         text-align : center;
-        @mixin smThanMedium {
+        @media (max-width: 768px) {
             @mixin deadCenter;
-            width      : 100%;
+            width: 100%;
         }
     }
     &.links-left ul  { text-align: left  }
@@ -76,6 +76,9 @@
         width       : 100%;
         height      : 100%;
         padding     : calc($primary-navH / 3) 15px;
+        @mixin smThanMedium {
+            font-weight: 700;
+        }
         @mixin atMedium{
             font-size : 1.25rem;
             padding   : calc($primary-navH / 3) 25px;
@@ -94,4 +97,8 @@
             color            : $navs-active-text;
         }
     }
+}
+
+#index .primary-nav {
+    @mixin atLarge { display: none }
 }

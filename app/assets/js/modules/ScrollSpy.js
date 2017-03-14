@@ -6,14 +6,14 @@ export default function ScrollSpy () {
     const pageSections = $('.page-section'),
           lazyImages   = $('.lazyload'),
           links        = $('.primary-nav a'),
-          anchors      = $('.anchor');
+          anchors      = $('a[href ^= "#"]');
 
 
     function sectionChange (section, direction, targetDirection) {
         if (direction == targetDirection) {
             const targetLink = `_${section.id}`;
             links.removeClass('current-link');
-            document.getElementsByClassName(targetLink).classList.add('current-link');
+            document.getElementById(targetLink).classList.add('current-link');
         }
     }
     
@@ -32,7 +32,6 @@ export default function ScrollSpy () {
             })
         })
 
-        links.smoothScroll();
         anchors.smoothScroll();
         
         lazyImages.load(() => Waypoint.refreshAll());

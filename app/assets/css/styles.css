@@ -8,6 +8,8 @@
 /* MODULES */
     /* MULTIPLE USE BLOCKS */
     @import 'modules/btn';
+    @import 'modules/cards';
+    @import 'modules/caret';
     @import 'modules/feature-item';
     @import 'modules/generic-content';
     @import 'modules/headline';

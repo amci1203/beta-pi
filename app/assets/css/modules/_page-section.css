@@ -5,9 +5,9 @@
         background-color : $mainBlue;
         color            : inherit;
     }
-    &--yellow {
-        background-color : $mainYellow;
-        color            : inherit;
+    &--white {
+        background-color : $white;
+        color            : $darkest-gray;
     }
     &--testimonials {
         background-color: #E0E6EF;

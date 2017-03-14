@@ -1,7 +1,7 @@
 .mobile-buttons {
     @mixin atMedium { display: none }
     transition       : all 0.3s ease-in;
-    background-color : $navs-color;
+    background-color : $mob-nav-color;
     position         : fixed;
     z-index          : 1000;
     bottom           : 0;
@@ -27,7 +27,7 @@
         height           : $mob-navH;
         margin           : 0 10px;
         &:hover {
-            background-color: color($navs-color b(50%));
+            background-color: color($mob-nav-color b(50%));
         }
         
         img {
@@ -42,7 +42,7 @@
         padding          : 0;
         z-index          : 300;
         bottom           : 10px;
-        background-color : $navs-color;
+        background-color : $mob-nav-color;
         width            : 50px;
         height           : 50px;
         border           : 1px solid #FFF;
@@ -96,18 +96,18 @@
                 &::before {
                     transform        : rotate(45deg) scaleX(1.25);
                     transform-origin : top left;
-                    background-color : $navs-color;
+                    background-color : $mob-nav-color;
                 }
                 .middle {
                     opacity          : 0;
                     transform        : scaleX(0);
                     transform-origin : left;
-                    background-color : $navs-color;
+                    background-color : $mob-nav-color;
                 }
                 &::after {
                     transform         : rotate(-45deg) scaleX(1.25);
                     transform-origin : bottom left;
-                    background-color : $navs-color;
+                    background-color : $mob-nav-color;
                 }
             }
         }
