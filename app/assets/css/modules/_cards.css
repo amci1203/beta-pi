@@ -2,13 +2,16 @@
     margin:  0;
     padding: 0;
     &.checklist li { @mixin clickable }
-    & > * {
+    
+    & > *, a {
+        @mixin noTextDecoration;
+        display: block;
         list-style-type: none;
         position: relative;
         float: none;
         margin: 20px auto;
         padding: 20px 15px;
-        color: $cards-text;
+        color: $cards-text !important;
         background-color: $cards-color;
         border: 1px solid $cards-border;
         box-shadow: 0 4px 7px 3px #111;
@@ -17,10 +20,6 @@
         @mixin atMedium {
             padding: 35px 50px;
             text-align: left;
-        }
-        a {
-            @mixin noTextDecoration;
-            font-weight: 700;
         }
         .qty {
             display: none;

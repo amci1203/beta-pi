@@ -12,7 +12,8 @@ function init () {
     StickyHeader();
     ScrollSpy();
     FullScreenSection('.large-hero')
-
+    
+    $('[href$=".html"]').click(e => false)
 }
 
 function doNothing () {}

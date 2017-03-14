@@ -6,20 +6,34 @@ body {
     background-color : $body-bg;
     font-family      : 'Roboto', 'Arial', sans-serif;
     padding          : 0;
-    padding-bottom   : 180px;
     margin           : 0;
     color            : $body-fg;
+    @mixin smThanLarge {
+        padding-bottom   : 180px;
+    }
     &.sticky-top {
+        @mixin atLarge  { padding-top: 10px !important };
         @mixin atMedium { padding-top: $primary-navH };
     }
     #body-bg {
         @mixin deadCenter;
         z-index: -100;
+        @mixin atMedium {
+            height: 100%;
+            width: auto;
+            padding: 45px 0;
+        }
     }
     #copyright-text {
         padding-top : 4.8rem;
         display     : block;
         text-align  : center;
+        @mixin atLarge {
+            padding  : 0;
+            position : absolute;
+            bottom   : 80px;
+            left     : 100px;
+        }
     }
 
 }
@@ -36,3 +50,5 @@ img {
 .pull-right { float: right }
 
 .scroll-lock { overflow: hidden }
+
+.hide-lg { @mixin atLarge { display: none }}

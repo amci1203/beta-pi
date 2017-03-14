@@ -116,9 +116,10 @@
 
 @define-mixin column $span, $viewport, $margin: 0 {
     .col-$(viewport)-$(span) {
-        float        : left;
-        width        : calc(($span * (100% / 12)) - $margin);
-        margin-right : $margin;
-        &:last-child { margin-right: 0 }
+        float  : left;
+        width  : calc(($span * (100% / 12)) - $margin);
+        margin : 0 calc($margin / 2);
+
+        p { width: 100% }
     }
 }
