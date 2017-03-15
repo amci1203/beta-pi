@@ -11,7 +11,7 @@ function init () {
     MobileMenu();
     StickyHeader();
     ScrollSpy();
-    FullScreenSection('.large-hero')
+    FullScreenSection('.large-hero', '<991')
     
     $('[href$=".html"]').click(e => false)
 }
